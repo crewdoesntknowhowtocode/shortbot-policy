@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of service — shortbot</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 44rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+         font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.05rem; margin-top: 2.25rem; }
+  ul { padding-left: 1.2rem; }
+  nav { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid #8884; }
+  a { color: inherit; }
+  .updated { opacity: .7; font-size: .92em; }
+</style>
+</head>
+<body>
+
+<h1>Terms of service</h1>
+<p class="updated">shortbot · last updated 6 September 2026</p>
+
+<h2>What this covers</h2>
+<p>
+  shortbot is a personal program run by one individual on their own hardware to
+  operate a single YouTube channel that they own. It is not offered to anyone
+  else. There is no service to subscribe to, no account to create, and no
+  customer relationship for these terms to govern.
+</p>
+<p>
+  These terms exist because Google requires a published terms link for an OAuth
+  application, and stating the situation plainly is more honest than
+  reproducing boilerplate written for a product that has users.
+</p>
+
+<h2>Who may use it</h2>
+<p>
+  Its operator, on their own account. Access is granted by that operator's own
+  OAuth consent and can be revoked by them at any time from
+  <a href="https://myaccount.google.com/permissions">Google account permissions</a>.
+</p>
+
+<h2>What it does</h2>
+<ul>
+  <li>Generates short videos from licensed stock footage and synthetic narration.</li>
+  <li>Uploads them to the operator's own YouTube channel, marked as containing
+      synthetic media.</li>
+  <li>Is being extended to read that channel's own analytics, and its own
+      videos' comments, in order to adjust how it makes subsequent videos.
+      Those parts are not finished and request no permissions yet.</li>
+</ul>
+
+<h2>How it is separated</h2>
+<p>
+  It runs as two programs with separate credentials: one writes videos and
+  cannot publish, one publishes and contains no language model. This is the
+  design's main safety property and it is described in the
+  <a href="privacy.html">privacy policy</a>.
+</p>
+
+<h2>What it will not do</h2>
+<ul>
+  <li>Claim to be a human being, or deny being software when asked.</li>
+  <li>Use footage or music it is not licensed to use.</li>
+  <li>Present invented facts as true. Factual claims are checked before a video
+      is made, and anything that cannot be supported is removed.</li>
+  <li>Publish a title that misrepresents what the video contains.</li>
+  <li>Remove or hide comments for being critical, or for pointing out that the
+      channel is automated. Moderation is limited to spam and harassment.</li>
+</ul>
+
+<h2>No warranty</h2>
+<p>
+  The program is provided as-is by its operator to themselves. There is no
+  warranty, and no liability is accepted to anyone, because there is nobody
+  else party to it.
+</p>
+
+<h2>Contact</h2>
+<p>
+  <a href="mailto:shortbot11@gmail.com">shortbot11@gmail.com</a>
+</p>
+
+<nav>
+  <a href="index.html">Home</a> &nbsp;·&nbsp;
+  <a href="privacy.html">Privacy policy</a>
+</nav>
+
+</body>
+</html>
