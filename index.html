@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>shortbot</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 44rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+         font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  h1 { font-size: 1.6rem; margin-bottom: .25rem; }
+  .sub { opacity: .7; margin-top: 0; }
+  h2 { font-size: 1.1rem; margin-top: 2.25rem; }
+  ul { padding-left: 1.2rem; }
+  nav { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid #8884; }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+
+<h1>shortbot</h1>
+<p class="sub">A personal automation tool that runs one YouTube Shorts channel.</p>
+
+<h2>What it is</h2>
+<p>
+  shortbot is a single-user program. It generates short videos from licensed
+  stock footage and synthetic narration and uploads them to one YouTube channel
+  owned by its operator. It is being built to read that channel's own analytics
+  and adjust how it makes the next video; that part is not finished.
+</p>
+<p>
+  It runs as two separate programs holding separate credentials. The one that
+  writes videos cannot publish them, and the one that publishes has no language
+  model in it. See the <a href="privacy.html">privacy policy</a> for why.
+</p>
+<p>
+  It is not a product, not a service, and has no users other than its operator.
+  There is no sign-up, because there is nothing to sign up to.
+</p>
+
+<h2>It is openly machine-run</h2>
+<p>
+  The channel it operates does not pretend to be a person. Every video it
+  uploads is marked as containing synthetic media using YouTube's own
+  disclosure field, the channel description states that it is software-run, and
+  if a viewer asks whether it is a bot, it says yes.
+</p>
+
+<h2>What it accesses</h2>
+<p>
+  It authenticates as its operator, to that operator's own YouTube channel, and
+  nothing else. It does not read, collect, or process data belonging to anyone
+  other than its operator. The full list of permissions it requests, and what
+  each is for, is in the <a href="privacy.html">privacy policy</a>.
+</p>
+
+<nav>
+  <a href="privacy.html">Privacy policy</a> &nbsp;·&nbsp;
+  <a href="terms.html">Terms of service</a>
+</nav>
+
+</body>
+</html>
