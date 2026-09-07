@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — shortbot</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 44rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+         font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.05rem; margin-top: 2.25rem; }
+  ul { padding-left: 1.2rem; }
+  code { font-size: .92em; background: #8881; padding: .1em .35em; border-radius: 3px; }
+  nav { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid #8884; }
+  a { color: inherit; }
+  .updated { opacity: .7; font-size: .92em; }
+  .box { border: 1px solid #8884; border-radius: 6px; padding: .9rem 1.1rem; margin: 1rem 0; }
+</style>
+</head>
+<body>
+
+<h1>Privacy policy</h1>
+<p class="updated">shortbot · last updated 6 September 2026</p>
+
+<h2>Summary</h2>
+<p>
+  shortbot is a single-user program operated by one person on their own
+  hardware. It authenticates only as its operator and only to that operator's
+  own YouTube channel. <strong>It collects no data from any other person, and
+  it has no other users.</strong>
+</p>
+
+<h2>Who operates it</h2>
+<p>
+  One individual, running it on a personal machine. Contact:
+  <a href="mailto:shortbot11@gmail.com">shortbot11@gmail.com</a>.
+</p>
+
+<h2>It is two programs, and that is deliberate</h2>
+<p>
+  shortbot is split into two programs that run separately and hold
+  <strong>separate credentials</strong>:
+</p>
+<ul>
+  <li><strong>The generator</strong> writes scripts, fetches stock footage,
+      synthesises narration and assembles a video into a folder. It is the part
+      that uses a language model. <strong>It holds no upload permission and
+      cannot publish anything.</strong></li>
+  <li><strong>The uploader</strong> takes one finished video from that folder and
+      publishes it. <strong>It contains no language model and makes no
+      decisions</strong> — it checks a stop file, checks a rate limit, verifies
+      the video, uploads, and confirms the result.</li>
+</ul>
+<div class="box">
+  This split is the main safety property of the design. The component that could
+  behave unexpectedly has no ability to publish, and the component that publishes
+  has no intelligence to behave unexpectedly with. It is enforced with separate
+  OAuth credentials, not merely by keeping the code in different files.
+</div>
+
+<h2>What Google data it accesses, and why</h2>
+<p>
+  Only the uploader authenticates to Google. It requests two scopes, against the
+  operator's own account:
+</p>
+<ul>
+  <li><code>youtube.upload</code> — to publish a video to the operator's own
+      channel.</li>
+  <li><code>youtube.readonly</code> — to read that video's status back after
+      upload and confirm it actually published, rather than trusting the upload
+      response.</li>
+</ul>
+<p>
+  Both are scoped to the operator's own channel. The program does not access
+  other channels, other accounts, or any Google service beyond YouTube.
+</p>
+<p>
+  Two further scopes are registered on the OAuth consent screen for planned
+  features — reading the channel's own analytics, and reading and replying to
+  comments on its own videos. <strong>Neither is currently requested by any code,
+  because those components are not built.</strong> If they are built, this policy
+  will be updated before they run.
+</p>
+
+<h2>What it stores</h2>
+<ul>
+  <li><strong>An OAuth token</strong>, on the operator's own machine, so the
+      uploader can publish without re-authenticating daily. It is not transmitted
+      anywhere except to Google.</li>
+  <li><strong>Its own videos and their metadata</strong> — scripts, titles,
+      settings used, and later the view figures for those videos — in a local
+      database, so it can compare what worked.</li>
+</ul>
+
+<h2>What it does not do</h2>
+<ul>
+  <li>No analytics, tracking, cookies, or telemetry on this website.</li>
+  <li>No selling, sharing, or transferring of data to anyone.</li>
+  <li>No advertising and no advertising identifiers.</li>
+  <li>No accounts, no sign-in, and no collection of anything from visitors to
+      this page.</li>
+  <li>No access to any Google account other than the operator's own.</li>
+</ul>
+
+<h2>Third parties</h2>
+<p>
+  Video clips come from stock libraries (Pexels and Pixabay) under their
+  licences, and every clip is credited to both the platform and the individual
+  contributor in the video description. Text is generated using Google's Gemini
+  API. Speech is synthesised locally, on the operator's own machine. None of
+  these receive personal data about anyone other than, unavoidably, the operator
+  as the account holder.
+</p>
+
+<h2>Retention and deletion</h2>
+<p>
+  Data lives on the operator's machine and can be deleted by deleting it. The
+  OAuth token can be revoked at any time from
+  <a href="https://myaccount.google.com/permissions">Google account permissions</a>,
+  which immediately ends the program's access.
+</p>
+
+<h2>Changes</h2>
+<p>
+  If this policy changes, the date at the top changes with it.
+</p>
+
+<nav>
+  <a href="index.html">Home</a> &nbsp;·&nbsp;
+  <a href="terms.html">Terms of service</a>
+</nav>
+
+</body>
+</html>
